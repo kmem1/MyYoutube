@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/videoListFragment">
+
+    <fragment
+        android:id="@+id/videoListFragment"
+        android:name="com.example.myyoutube.presentation.ui.VideoListFragment"
+        android:label="VideoListFragment" >
+        <action
+            android:id="@+id/openChatAction"
+            app:destination="@id/videoDetailedContainerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/videoDetailedFragment"
+        android:name="com.example.myyoutube.presentation.ui.VideoDetailedFragment"
+        android:label="VideoDetailedFragment" >
+        <argument
+            android:name="video"
+            app:argType="com.example.myyoutube.domain.model.Video" />
+    </fragment>
+    <fragment
+        android:id="@+id/videoDetailedContainerFragment"
+        android:name="com.example.myyoutube.presentation.ui.VideoDetailedContainerFragment"
+        android:label="VideoDetailedContainerFragment" >
+        <argument
+            android:name="video"
+            app:argType="com.example.myyoutube.domain.model.Video" />
+    </fragment>
+</navigation>

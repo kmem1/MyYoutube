@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingTop="12dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/commentatorImageView"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="12dp"/>
+
+    <TextView
+        android:id="@+id/commentatorNameView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:layout_toEndOf="@id/commentatorImageView"
+        android:layout_marginStart="12dp"
+        android:fontFamily="sans-serif"
+        android:textSize="11sp"
+        tools:text="Cool man" />
+
+    <TextView
+        android:id="@+id/commentatorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/commentatorNameView"
+        android:layout_alignStart="@id/commentatorNameView"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/black"
+        tools:text="This is my message. Nice video. Like and dislike!!!"/>
+
+</RelativeLayout>
